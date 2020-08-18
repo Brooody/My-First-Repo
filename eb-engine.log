@@ -1,0 +1,252 @@
+2020/08/15 13:46:18.481895 [INFO] Starting...
+2020/08/15 13:46:18.481940 [INFO] Starting EBPlatform-PlatformEngine
+2020/08/15 13:46:18.481997 [INFO] reading event message file
+2020/08/15 13:46:18.482098 [INFO] no eb envtier info file found, skip loading env tier info.
+2020/08/15 13:46:18.482166 [INFO] Engine received EB command userdata-exec
+
+2020/08/15 13:46:18.538220 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBAutoScalingGroup --region us-east-2
+2020/08/15 13:46:19.247385 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBBeanstalkMetadata --region us-east-2
+2020/08/15 13:46:20.122918 [INFO] This is a workflow controlled instance.
+2020/08/15 13:46:20.122980 [INFO] Engine command: (env-launch)
+
+2020/08/15 13:46:20.128748 [INFO] Executing instruction: SyncClock
+2020/08/15 13:46:20.128762 [INFO] Starting SyncClock
+2020/08/15 13:46:20.128781 [INFO] Running command /bin/sh -c /usr/bin/chronyc tracking
+2020/08/15 13:46:20.186182 [INFO] Reference ID    : A9FEA97B (169.254.169.123)
+Stratum         : 4
+Ref time (UTC)  : Sat Aug 15 13:46:18 2020
+System time     : 0.465736896 seconds slow of NTP time
+Last offset     : -0.000132605 seconds
+RMS offset      : 0.000132605 seconds
+Frequency       : 6.382 ppm slow
+Residual freq   : -20.210 ppm
+Skew            : 2.995 ppm
+Root delay      : 0.000423278 seconds
+Root dispersion : 0.000313490 seconds
+Update interval : 1.9 seconds
+Leap status     : Normal
+
+2020/08/15 13:46:20.186214 [INFO] Running command /bin/sh -c /usr/bin/chronyc -a makestep
+2020/08/15 13:46:20.654091 [INFO] 200 OK
+
+2020/08/15 13:46:20.654136 [INFO] Skipping Configure OS
+2020/08/15 13:46:20.654143 [INFO] Skipping LockGUID
+2020/08/15 13:46:20.654149 [INFO] Skipping GenerateEBBanner
+2020/08/15 13:46:20.654155 [INFO] Skipping Install Process Manager
+2020/08/15 13:46:20.654161 [INFO] Skipping install proxy
+2020/08/15 13:46:20.654167 [INFO] Skipping installhealthd
+2020/08/15 13:46:20.654172 [INFO] Skipping Install Log Streaming Manager
+2020/08/15 13:46:20.654178 [INFO] Skipping install X-Ray
+2020/08/15 13:46:20.654184 [INFO] Skipping install httpd
+2020/08/15 13:46:20.654191 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:20.654195 [INFO] Executing instruction: installSqsd
+2020/08/15 13:46:20.654200 [INFO] This is a web server environment instance, skip install sqsd daemon ...
+2020/08/15 13:46:20.654205 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:20.654209 [INFO] Executing instruction: bootstraphealthd
+2020/08/15 13:46:20.654214 [INFO] this is an enhanced health env ...
+2020/08/15 13:46:20.654226 [INFO] Running command /bin/sh -c id -u apache
+2020/08/15 13:46:20.661770 [INFO] 48
+
+2020/08/15 13:46:20.661801 [INFO] bootstrap healthd....
+2020/08/15 13:46:20.661817 [INFO] Running command /bin/sh -c /usr/bin/id -u healthd || /usr/sbin/useradd --user-group healthd -s /sbin/nologin --create-home
+2020/08/15 13:46:20.882445 [INFO] bootstrap healthd....
+2020/08/15 13:46:20.882473 [INFO] Running command /bin/sh -c /usr/bin/id -u healthd || /usr/sbin/useradd --user-group healthd -s /sbin/nologin --create-home
+2020/08/15 13:46:20.894714 [INFO] 1001
+
+2020/08/15 13:46:20.894948 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:20.894954 [INFO] Executing instruction: GetSetupProxyLog
+2020/08/15 13:46:20.895012 [INFO] Skipping Install yum packages
+2020/08/15 13:46:20.895018 [INFO] Skipping Install default nodejs
+2020/08/15 13:46:20.895023 [INFO] Skipping MarkBaked
+2020/08/15 13:46:20.895029 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:20.895032 [INFO] Executing instruction: TuneSystemSettings
+2020/08/15 13:46:20.895036 [INFO] Starting TuneSystemSettings
+2020/08/15 13:46:20.895041 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:20.900139 [INFO] Executing instruction: GetSetupLogRotate
+2020/08/15 13:46:20.900145 [INFO] Initialize LogRotate files and directories
+2020/08/15 13:46:20.994700 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:20.994713 [INFO] Executing instruction: BootstrapCFNHup
+2020/08/15 13:46:20.994717 [INFO] Bootstrap cfn-hup
+2020/08/15 13:46:21.004815 [INFO] Copying file /opt/elasticbeanstalk/config/private/aws-eb-command-handler.conf to /etc/cfn/hooks.d/aws-eb-command-handler.conf
+2020/08/15 13:46:21.017776 [INFO] Executing instruction: StartCFNHup
+2020/08/15 13:46:21.017790 [INFO] Start cfn-hup
+2020/08/15 13:46:21.017817 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2020/08/15 13:46:21.028759 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2020/08/15 13:46:21.042042 [INFO] Running command /bin/sh -c systemctl show -p PartOf cfn-hup.service
+2020/08/15 13:46:21.077828 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2020/08/15 13:46:21.220336 [INFO] Running command /bin/sh -c systemctl reset-failed
+2020/08/15 13:46:21.229918 [INFO] Running command /bin/sh -c systemctl is-enabled aws-eb.target
+2020/08/15 13:46:21.244180 [INFO] Running command /bin/sh -c systemctl enable aws-eb.target
+2020/08/15 13:46:21.375056 [INFO] Running command /bin/sh -c systemctl start aws-eb.target
+2020/08/15 13:46:21.384830 [INFO] Running command /bin/sh -c systemctl enable cfn-hup.service
+2020/08/15 13:46:21.530994 [INFO] Running command /bin/sh -c systemctl show -p PartOf cfn-hup.service
+2020/08/15 13:46:21.541364 [INFO] Running command /bin/sh -c systemctl is-active cfn-hup.service
+2020/08/15 13:46:21.550785 [INFO] Running command /bin/sh -c systemctl start cfn-hup.service
+2020/08/15 13:46:21.621283 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:21.621298 [INFO] Executing instruction: SetupPublishLogCronjob
+2020/08/15 13:46:21.621302 [INFO] Setup publish logs cron job...
+2020/08/15 13:46:21.621307 [INFO] Copying file /opt/elasticbeanstalk/config/private/logtasks/cron/publishlogs to /etc/cron.d/publishlogs
+2020/08/15 13:46:21.622648 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:21.622656 [INFO] Executing instruction: MarkBootstrapped
+2020/08/15 13:46:21.622660 [INFO] Starting MarkBootstrapped
+2020/08/15 13:46:21.622665 [INFO] Instance has NOT been bootstrapped
+2020/08/15 13:46:21.622713 [INFO] Marked instance as Bootstrapped
+2020/08/15 13:46:21.622718 [INFO] Executing instruction: Save CFN Stack Info
+2020/08/15 13:46:21.622751 [INFO] Starting SwitchCFNStack
+2020/08/15 13:46:21.622756 [INFO] Executing cleanup logic
+2020/08/15 13:46:21.622764 [INFO] Platform Engine finished execution on command: env-launch
+
+2020/08/15 13:47:11.641751 [INFO] Starting...
+2020/08/15 13:47:11.641796 [INFO] Starting EBPlatform-PlatformEngine
+2020/08/15 13:47:11.641811 [INFO] reading event message file
+2020/08/15 13:47:11.641908 [INFO] no eb envtier info file found, skip loading env tier info.
+2020/08/15 13:47:11.641972 [INFO] Engine received EB command cfn-hup-exec
+
+2020/08/15 13:47:11.722612 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBAutoScalingGroup --region us-east-2
+2020/08/15 13:47:12.079046 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBBeanstalkMetadata --region us-east-2
+2020/08/15 13:47:12.375203 [INFO] checking whether command app-deploy is applicable to this instance...
+2020/08/15 13:47:12.375216 [INFO] this command is applicable to the instance, thus instance should execute command
+2020/08/15 13:47:12.375221 [INFO] Engine command: (app-deploy)
+
+2020/08/15 13:47:12.375227 [INFO] Downloading EB Application...
+2020/08/15 13:47:12.375230 [INFO] Region: us-east-2
+2020/08/15 13:47:12.375234 [INFO] envID: e-4igmxrwaqq
+2020/08/15 13:47:12.375237 [INFO] envBucket: elasticbeanstalk-us-east-2-915181802134
+2020/08/15 13:47:12.375241 [INFO] Using manifest file name from command request
+2020/08/15 13:47:12.375248 [INFO] Unable to get version manifest file.
+2020/08/15 13:47:12.375257 [INFO] Downloading latest manifest available.
+2020/08/15 13:47:12.375260 [INFO] Download latest app version manifest
+2020/08/15 13:47:12.375336 [INFO] resources/environments/e-4igmxrwaqq/_runtime/versions/manifest
+2020/08/15 13:47:12.461802 [INFO] latestManifest key *: resources/environments/e-4igmxrwaqq/_runtime/versions/manifest_1597499086860
+
+2020/08/15 13:47:12.461978 [INFO] Downloading: bucket: elasticbeanstalk-us-east-2-915181802134, object: /resources/environments/e-4igmxrwaqq/_runtime/versions/manifest_1597499086860
+2020/08/15 13:47:12.476683 [INFO] Download successful145bytes downloaded
+2020/08/15 13:47:12.476691 [INFO] Trying to read and parse version manifest...
+2020/08/15 13:47:12.476818 [INFO] Downloading: bucket: elasticbeanstalk-us-east-2-915181802134, object: /resources/environments/e-4igmxrwaqq/_runtime/_versions/udagram-vj-dev/app-4467-200815_191424
+2020/08/15 13:47:12.485926 [INFO] Download successful168bytes downloaded
+2020/08/15 13:47:12.486224 [INFO] Executing instruction: ElectLeader
+2020/08/15 13:47:12.486232 [INFO] Running leader election for instance i-0c5b3c9f061cdcc9c...
+2020/08/15 13:47:12.486236 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2020/08/15 13:47:12.486255 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 1e86ba1d-f54c-471a-ac8f-76ce75dfd2c1 --listener-id i-0c5b3c9f061cdcc9c --region us-east-2
+2020/08/15 13:47:12.783077 [INFO] Instance is Leader.
+2020/08/15 13:47:12.783122 [INFO] Executing instruction: stopSqsd
+2020/08/15 13:47:12.783129 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2020/08/15 13:47:12.783144 [INFO] Executing instruction: PreBuildEbExtension
+2020/08/15 13:47:12.783150 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2020/08/15 13:47:12.783169 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBAutoScalingGroup --region us-east-2 --configsets Infra-EmbeddedPreBuild
+2020/08/15 13:47:13.157511 [INFO] Finished executing the config set Infra-EmbeddedPreBuild.
+
+2020/08/15 13:47:13.157529 [INFO] Executing instruction: StageApplication
+2020/08/15 13:47:13.157643 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2020/08/15 13:47:13.157667 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2020/08/15 13:47:13.169223 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2020/08/15 13:47:13.169714 [INFO] Executing instruction: RunAppDeployPreBuildHooks
+2020/08/15 13:47:13.169731 [INFO] The dir .platform/hooks/prebuild/ does not exist in the application. Skipping this step...
+2020/08/15 13:47:13.169736 [INFO] Executing instruction: Install customer specified node.js version
+2020/08/15 13:47:13.169740 [INFO] installing specified nodejs version...
+2020/08/15 13:47:13.169747 [INFO] there is no package.json file, skip installing specified version of nodejs
+2020/08/15 13:47:13.169755 [INFO] Executing instruction: Use NPM to install dependencies
+2020/08/15 13:47:13.169764 [INFO] there is no package.json file, skip installing dependencies
+2020/08/15 13:47:13.169767 [INFO] Executing instruction: check Procfile
+2020/08/15 13:47:13.169771 [INFO] checking Procfile
+2020/08/15 13:47:13.169777 [INFO] no Procfile found, generating Procfile
+2020/08/15 13:47:13.169781 [INFO] checking package.json file
+2020/08/15 13:47:13.169787 [INFO] checking app.js file from source
+2020/08/15 13:47:13.169805 [INFO] checking server.js file from source
+2020/08/15 13:47:13.169819 [ERROR] An error occurred during execution of command [app-deploy] - [check Procfile]. Stop running the command. Error: node.js may have issues starting. Please provide a package.json file or add server.js/app.js file in source bundle 
+
+2020/08/15 13:47:13.169827 [INFO] Executing cleanup logic
+2020/08/15 13:47:13.169909 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment: You didn't include a 'package.json' file in your source bundle. The deployment didn't install a specific Node.js version.","timestamp":1597499233,"severity":"INFO"},{"msg":"Instance deployment failed to generate a 'Procfile' for Node.js. Provide one of these files: 'package.json', 'server.js', or 'app.js'. The deployment failed.","timestamp":1597499233,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1597499233,"severity":"ERROR"}]}]}
+
+2020/08/15 13:47:13.170040 [INFO] Platform Engine finished execution on command: app-deploy
+
+2020/08/15 15:55:25.716008 [INFO] Starting...
+2020/08/15 15:55:25.716052 [INFO] Starting EBPlatform-PlatformEngine
+2020/08/15 15:55:25.716072 [INFO] reading event message file
+2020/08/15 15:55:25.716174 [INFO] no eb envtier info file found, skip loading env tier info.
+2020/08/15 15:55:25.716236 [INFO] Engine received EB command cfn-hup-exec
+
+2020/08/15 15:55:25.815212 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBAutoScalingGroup --region us-east-2
+2020/08/15 15:55:26.173819 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBBeanstalkMetadata --region us-east-2
+2020/08/15 15:55:26.470858 [INFO] checking whether command config-deploy is applicable to this instance...
+2020/08/15 15:55:26.470872 [INFO] this command is applicable to the instance, thus instance should execute command
+2020/08/15 15:55:26.470876 [INFO] Engine command: (config-deploy)
+
+2020/08/15 15:55:26.470991 [INFO] Executing instruction: stopSqsd
+2020/08/15 15:55:26.470997 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2020/08/15 15:55:26.471000 [INFO] Executing instruction: StageApplication
+2020/08/15 15:55:26.471113 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2020/08/15 15:55:26.471131 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2020/08/15 15:55:26.473443 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2020/08/15 15:55:26.473892 [INFO] Executing instruction: RunConfigDeployPreBuildHooks
+2020/08/15 15:55:26.473910 [INFO] The dir .platform/confighooks/prebuild/ does not exist in the application. Skipping this step...
+2020/08/15 15:55:26.473915 [INFO] Executing instruction: Install customer specified node.js version
+2020/08/15 15:55:26.473919 [INFO] installing specified nodejs version...
+2020/08/15 15:55:26.473926 [INFO] there is no package.json file, skip installing specified version of nodejs
+2020/08/15 15:55:26.473933 [INFO] Executing instruction: Use NPM to install dependencies
+2020/08/15 15:55:26.473941 [INFO] there is no package.json file, skip installing dependencies
+2020/08/15 15:55:26.473945 [INFO] Executing instruction: check Procfile
+2020/08/15 15:55:26.473949 [INFO] checking Procfile
+2020/08/15 15:55:26.473955 [INFO] no Procfile found, generating Procfile
+2020/08/15 15:55:26.473958 [INFO] checking package.json file
+2020/08/15 15:55:26.473964 [INFO] checking app.js file from source
+2020/08/15 15:55:26.473971 [INFO] checking server.js file from source
+2020/08/15 15:55:26.473983 [ERROR] An error occurred during execution of command [config-deploy] - [check Procfile]. Stop running the command. Error: node.js may have issues starting. Please provide a package.json file or add server.js/app.js file in source bundle 
+
+2020/08/15 15:55:26.473992 [INFO] Executing cleanup logic
+2020/08/15 15:55:26.474051 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment: You didn't include a 'package.json' file in your source bundle. The deployment didn't install a specific Node.js version.","timestamp":1597506926,"severity":"INFO"},{"msg":"Instance deployment failed to generate a 'Procfile' for Node.js. Provide one of these files: 'package.json', 'server.js', or 'app.js'. The deployment failed.","timestamp":1597506926,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1597506926,"severity":"ERROR"}]}]}
+
+2020/08/15 15:55:26.474164 [INFO] Platform Engine finished execution on command: config-deploy
+
+2020/08/15 15:59:06.014135 [INFO] Starting...
+2020/08/15 15:59:06.014185 [INFO] Starting EBPlatform-PlatformEngine
+2020/08/15 15:59:06.014201 [INFO] reading event message file
+2020/08/15 15:59:06.014302 [INFO] no eb envtier info file found, skip loading env tier info.
+2020/08/15 15:59:06.014362 [INFO] Engine received EB command cfn-hup-exec
+
+2020/08/15 15:59:06.071224 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBAutoScalingGroup --region us-east-2
+2020/08/15 15:59:06.431634 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBBeanstalkMetadata --region us-east-2
+2020/08/15 15:59:06.775817 [INFO] checking whether command config-deploy is applicable to this instance...
+2020/08/15 15:59:06.775842 [INFO] this command is applicable to the instance, thus instance should execute command
+2020/08/15 15:59:06.775847 [INFO] Engine command: (config-deploy)
+
+2020/08/15 15:59:06.775984 [INFO] Executing instruction: stopSqsd
+2020/08/15 15:59:06.775990 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2020/08/15 15:59:06.775994 [INFO] Executing instruction: StageApplication
+2020/08/15 15:59:06.776117 [INFO] extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/
+2020/08/15 15:59:06.776135 [INFO] Running command /bin/sh -c /usr/bin/unzip -q -o /opt/elasticbeanstalk/deployment/app_source_bundle -d /var/app/staging/
+2020/08/15 15:59:06.778559 [INFO] finished extracting /opt/elasticbeanstalk/deployment/app_source_bundle to /var/app/staging/ successfully
+2020/08/15 15:59:06.779025 [INFO] Executing instruction: RunConfigDeployPreBuildHooks
+2020/08/15 15:59:06.779041 [INFO] The dir .platform/confighooks/prebuild/ does not exist in the application. Skipping this step...
+2020/08/15 15:59:06.779045 [INFO] Executing instruction: Install customer specified node.js version
+2020/08/15 15:59:06.779049 [INFO] installing specified nodejs version...
+2020/08/15 15:59:06.779057 [INFO] there is no package.json file, skip installing specified version of nodejs
+2020/08/15 15:59:06.779064 [INFO] Executing instruction: Use NPM to install dependencies
+2020/08/15 15:59:06.779073 [INFO] there is no package.json file, skip installing dependencies
+2020/08/15 15:59:06.779077 [INFO] Executing instruction: check Procfile
+2020/08/15 15:59:06.779080 [INFO] checking Procfile
+2020/08/15 15:59:06.779089 [INFO] no Procfile found, generating Procfile
+2020/08/15 15:59:06.779093 [INFO] checking package.json file
+2020/08/15 15:59:06.779099 [INFO] checking app.js file from source
+2020/08/15 15:59:06.779105 [INFO] checking server.js file from source
+2020/08/15 15:59:06.779118 [ERROR] An error occurred during execution of command [config-deploy] - [check Procfile]. Stop running the command. Error: node.js may have issues starting. Please provide a package.json file or add server.js/app.js file in source bundle 
+
+2020/08/15 15:59:06.779127 [INFO] Executing cleanup logic
+2020/08/15 15:59:06.779184 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment: You didn't include a 'package.json' file in your source bundle. The deployment didn't install a specific Node.js version.","timestamp":1597507146,"severity":"INFO"},{"msg":"Instance deployment failed to generate a 'Procfile' for Node.js. Provide one of these files: 'package.json', 'server.js', or 'app.js'. The deployment failed.","timestamp":1597507146,"severity":"ERROR"},{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1597507146,"severity":"ERROR"}]}]}
+
+2020/08/15 15:59:06.779311 [INFO] Platform Engine finished execution on command: config-deploy
+
+2020/08/15 17:36:15.519182 [INFO] Starting...
+2020/08/15 17:36:15.519241 [INFO] Starting EBPlatform-PlatformEngine
+2020/08/15 17:36:15.519255 [INFO] reading event message file
+2020/08/15 17:36:15.519346 [INFO] no eb envtier info file found, skip loading env tier info.
+2020/08/15 17:36:15.519419 [INFO] Engine received EB command cfn-hup-exec
+
+2020/08/15 17:36:15.598703 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBAutoScalingGroup --region us-east-2
+2020/08/15 17:36:15.956738 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-2:915181802134:stack/awseb-e-4igmxrwaqq-stack/7bdaf220-defd-11ea-8746-0a25a5257108 -r AWSEBBeanstalkMetadata --region us-east-2
+2020/08/15 17:36:16.251185 [INFO] checking whether command bundle-log is applicable to this instance...
+2020/08/15 17:36:16.251198 [INFO] this command is applicable to the instance, thus instance should execute command
+2020/08/15 17:36:16.251203 [INFO] Engine command: (bundle-log)
+
+2020/08/15 17:36:16.251254 [INFO] Executing instruction: GetBundleLogs
+2020/08/15 17:36:16.251259 [INFO] Bundle Logs...
